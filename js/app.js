@@ -6,15 +6,35 @@
 
     //1.1   Acquisizione nome e cognome utente.
         //1.1.1 Selezione dell'elemento input con ID "name".
-        //1.1.2 Recupero del valore dell'imput che verrà salvato nella variabile "name".
+        const inputNameElement = document.getElementById('name')//Element | null
 
-        //1.1.3 Selezione dell'elemento input con ID "surname".
-        //1.1.4 Recupero del valore dell'imput che verrà salvato nella variabile "surname".
+        //1.1.2 Selezione dell'elemento input con ID "surname".
+        const inputSurnameElement = document.getElementById('surname')//Element | null
 
     //1.2   Acquisizione fascia d'età utente.   
         //1.2.1 Selezione dell'elemento input con ID "age_groups".
-        //1.2.2 Recupero del valore dell'imput che verrà salvato nella variabile "ageGroups".
+        const inputAgeGroupsElement = document.getElementById('age_groups')//Element | null
 
     //1.3   Acquisizione distanza da percorrere.
         //1.3.1 Selezione dell'elemento input con ID "distance".
-        //1.3.2 Recupero del valore dell'imput che verrà salvato nella variabile "distance".
+        const inputDistanceElement = document.getElementById('distance')//Element | null
+    
+    //1.4   Dichiarazione delle variabili.
+    let name,
+    surname,
+    age_groups,
+    distance
+
+    //1.5   Acquisizione bottone "Submit"
+    const submitElement = document.getElementById('submit')//Element | null
+
+    //1.6   Acquisizione dati tramite click su buttone "Genera"
+    submitElement.addEventListener('click', function () {
+    
+        name = inputNameElement.value // string
+        surname = inputSurnameElement.value //String
+        age_groups = inputAgeGroupsElement.value //String
+        distance = inputDistanceElement.value//String
+             
+        console.log(name, surname, age_groups, distance)
+    })
