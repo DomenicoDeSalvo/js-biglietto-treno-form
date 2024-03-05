@@ -54,9 +54,9 @@
                     //3.2 Calcolo dello sconto.
                     let discount = 0; //Number 
                         //3.2.1 Lo sconto sarà del 20% per i minorenni e del 40% per gli over 65.
-                        if(ageGroups === "young"){
+                        if(ageGroups === "Giovane"){
                             discount = basePrice * 0.2; //Number
-                        } else if (ageGroups === "senior"){
+                        } else if (ageGroups === "Senior"){
                             discount = basePrice * 0.4; //Number
                             }
                         console.log('Discount:' + discount.toFixed(2) + '€');
@@ -67,23 +67,40 @@
                     console.log('Final Price:' + finalPrice.toFixed(2) + '€');
 
                 //4 Personalizzazione del biglietto.
-                    //4.1   Acquisizione nome passeggero        
+                    //4.1   Acquisizione nome passeggero.        
                     const passengerNameElement = document.getElementById('passenger_name');//Element | Null
-                    console.log(passengerNameElement)
-                            //4.1.2 Sostituzione valore
-                            
-                    //4.2   Acquisizione cognome passeggero   
+                            //4.1.1 Sostituzione valore.
+                            passengerNameElement.innerHTML = name; //String
+
+                    //4.2   Acquisizione cognome passeggero.   
                     const passengerSurnameElement = document.getElementById('passenger_surname');//Element | Null
-                    //4.3   Acquisizione carrozza passaggero
+                            //4.2.1 Sostituzione valore
+                            passengerSurnameElement.innerHTML = surname; //String
+
+                    //4.3   Acquisizione carrozza passaggero.
                     const passengerWagonElement = document.getElementById('wagon');//Element | Null
-                    //4.4   Acquisizione posto a sedere passeggero
+                            //4.3.1 Sostituzione valore con uno generato casualmente. Il numero è arrotondato per non avere valori decimali.
+                            passengerWagonElement.innerHTML = Math.floor(Math.random() * (12 - 1 + 1) + 1); //Number
+
+                    //4.4   Acquisizione posto a sedere passeggero.
                     const passengerSitElement = document.getElementById('sit');//Element | Null
-                    //4.5   Acquisizione codice biglietto passeggero
+                            //4.4.1 Sostituzione valore con uno generato casualmente. Il numero è arrotondato per non avere valori decimali.
+                            passengerSitElement.innerHTML = Math.floor(Math.random() * (80 - 1 + 1) + 1); //Number
+
+                    //4.5   Acquisizione codice biglietto passeggero.
                     const passengerTicketCodeElement = document.getElementById('ticket__code');//Element | Null
+                            //4.3.1 Sostituzione valore con uno generato casualmente. Il numero è arrotondato per non avere valori decimali.
+                            passengerTicketCodeElement.innerHTML = Math.floor(Math.random() * (99999 - 10000 + 1) + 1); //Number
+
                     //4.6   Acquisizione tariffa relativa alla fascia d'età del passeggero
                     const passengerTariffElement = document.getElementById('tariff');//Element | Null
-                    //4.7   Acquisizione prezzo finale del biglietto
+                            //4.6.1 Sostituzione valore.
+                            passengerTariffElement.innerHTML = ageGroups; //String
+
+                    //4.7   Acquisizione prezzo finale del biglietto.
                     const passengerTicketPriceElement = document.getElementById('price');//Element | Null
+                            //4.7.1 Sostituzione valore.
+                            passengerTicketPriceElement.innerHTML = finalPrice + '€'; //Number
 
         
             }   else {
