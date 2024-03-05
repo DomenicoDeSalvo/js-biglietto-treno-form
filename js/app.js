@@ -100,7 +100,7 @@
                     //4.7   Acquisizione prezzo finale del biglietto.
                     const passengerTicketPriceElement = document.getElementById('price');//Element | Null
                             //4.7.1 Sostituzione valore.
-                            passengerTicketPriceElement.innerHTML = finalPrice + '€'; //Number
+                            passengerTicketPriceElement.innerHTML = finalPrice.toFixed(2) + '€'; //Number
 
         
             }   else {

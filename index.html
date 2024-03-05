@@ -8,102 +8,97 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <!-- APP -->
-        <div id="app" class="vh-100">
-            <!-- DATA ACQUISITION -->
-            <section class="data_acquisition text-center my-5">
-                <div class="ms_container">
-                    <h2 class="text-white my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-                </div>
-                <div class="ms_container card p-3">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 my-4">
-                        <div class="col">
-                            <div class="my-3">
-                                <label for="name" class="form-label">NOME</label>
-                                <input type="text" class="form-control" id="name" placeholder="Inserire nome">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-3">
-                                <label for="surname" class="form-label">COGNOME</label>
-                                <input type="text" class="form-control" id="surname" placeholder="Inserire cognome">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-3">
-                                <label for="age_groups" class="form-label">FASCIA D'ETÀ</label>
-                                <select class="form-select" id="age_groups">
-                                    <option value="Giovane">Under 18</option>
-                                    <option value="Adulto">Adulto</option>
-                                    <option value="Senior">Over 65</option>
-                                  </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-3">
-                                <label for="distance" class="form-label">DISTANZA</label>
-                                <input type="text" class="form-control" id="distance" placeholder="Inserire Km da percorrere">
-                            </div>
+        <!-- DATA ACQUISITION -->
+        <section class="data_acquisition text-center my-4">
+            <div class="ms_container">
+                <h2 class="text-white my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            </div>
+            <div class="ms_container card p-3">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 my-4">
+                    <div class="col">
+                        <div class="my-3">
+                            <label for="name" class="form-label">NOME</label>
+                            <input type="text" class="form-control" id="name" placeholder="Inserire nome">
                         </div>
                     </div>
-                    <div class="d-flex gap-4 mt-3 mb-2">
-                        <button type="submit" id="submit" class="btn btn-lg">Genera</button>
-                        <button class="btn btn-lg">Annulla</button>
+                    <div class="col">
+                        <div class="my-3">
+                            <label for="surname" class="form-label">COGNOME</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Inserire cognome">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-3">
+                            <label for="age_groups" class="form-label">FASCIA D'ETÀ</label>
+                            <select class="form-select" id="age_groups">
+                                <option value="Giovane">Under 18</option>
+                                <option value="Adulto">Adulto</option>
+                                <option value="Senior">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-3">
+                            <label for="distance" class="form-label">DISTANZA</label>
+                            <input type="text" class="form-control" id="distance" placeholder="Inserire Km da percorrere">
+                        </div>
                     </div>
                 </div>
-            </section>
-            <!-- TICKET OUTPUT -->
-            <section class=" text-center my-5">
-                <div class=" ms_container">
-                    <h2 class="text-white my-3">IL TUO BIGLIETTO</h2>
+                <div class="d-flex gap-4 mt-3 mb-2">
+                    <button type="submit" id="submit" class="btn btn-lg">Genera</button>
+                    <button class="btn btn-lg">Annulla</button>
                 </div>
-                <div class="ms_container p-5 ticket">
-                    <div class="fs-3 fw-bold">
-                        RIEPILOGO BIGLIETTO
-                    </div>
-                    <div class="row row-cols-2 row-cols-lg-4">
-                        <div class="col py-2 text-start ps-5">
-                            <div class="py-2">
-                                <span class="ticket__value">NOME:</span>
-                                <span id="passenger_name">---</span>
-                            </div>
-                            <div class="py-2">
-                                <span class="ticket__value">COGNOME:</span>
-                                <span id="passenger_surname">---</span>
-                            </div>                            
-                        </div>
-                        <div class="col py-2 text-start ps-5">
-                            <div class="py-2">
-                                <span class="ticket__value">CARROZZA:</span>
-                                <span id="wagon">---</span>
-                            </div>
-                            <div class="py-2">
-                                <span class="ticket__value">POSTO:</span>
-                                <span id="sit">---</span>
-                            </div>
-                        </div>
-                        <div class="col py-2 text-start ps-5">
-                            <div class="py-2">
-                                <span class="ticket__value">CODICE BIGLIETTO:</span>
-                                <span id="ticket__code">---</span>
-                            </div>
-                        </div>
-                        <div class="col py-2 text-start ps-5">
-                            <div class="py-2">
-                                <span class="ticket__value">TARIFFA:</span>
-                                <span id="tariff">---</span>
-                            </div>
-                            <div class="py-2">
-                                <span class="ticket__value">COSTO BIGLIETTO:</span>
-                                <span id="price">---</span>
-                            </div>
-                        </div>
-
-                    </div>
-
+            </div>
+        </section>
+        <!-- TICKET OUTPUT -->
+        <section class=" text-center my-5">
+            <div class=" ms_container">
+                <h2 class="text-white my-3">IL TUO BIGLIETTO</h2>
+            </div>
+            <div class="ms_container py-4 px-5 ticket">
+                <div class="fs-3 fw-bold">
+                    RIEPILOGO BIGLIETTO
                 </div>
-            </section>
-        </div>
+                <div class="row row-cols-2 row-cols-lg-4">
+                    <div class="col py-2 text-start ps-5">
+                        <div class="py-2">
+                            <span class="ticket__value">NOME:</span>
+                            <span id="passenger_name">---</span>
+                        </div>
+                        <div class="py-2">
+                            <span class="ticket__value">COGNOME:</span>
+                            <span id="passenger_surname">---</span>
+                        </div>                            
+                    </div>
+                    <div class="col py-2 text-start ps-5">
+                        <div class="py-2">
+                            <span class="ticket__value">CARROZZA:</span>
+                            <span id="wagon">---</span>
+                        </div>
+                        <div class="py-2">
+                            <span class="ticket__value">POSTO:</span>
+                            <span id="sit">---</span>
+                        </div>
+                    </div>
+                    <div class="col py-2 text-start ps-5">
+                        <div class="py-2">
+                            <span class="ticket__value">CODICE BIGLIETTO:</span>
+                            <span id="ticket__code">---</span>
+                        </div>
+                    </div>
+                    <div class="col py-2 text-start ps-5">
+                        <div class="py-2">
+                            <span class="ticket__value">TARIFFA:</span>
+                            <span id="tariff">---</span>
+                        </div>
+                        <div class="py-2">
+                            <span class="ticket__value">COSTO BIGLIETTO:</span>
+                            <span id="price">---</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- JS LINK -->
         <script src="./js/app.js"></script>
     </body>
