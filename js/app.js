@@ -37,4 +37,21 @@
         distance = inputDistanceElement.value//String
              
         console.log(name, surname, age_groups, distance)
+        
+        //2 Validazione dei dati: i campi nome e cognome non possono essere lasciati vuoti, la distanza da percorrere deve essere maggiore di 0 Km.
+        
+        if( 
+            name != ('') &&
+            surname != ('') &&
+            age_groups != ('') &&
+            distance > 0 &&
+            !isNaN(distance)
+            ) {
+        
+            }   else {
+                alert('Inserire dati validi')
+            }
     })
+
+
+
