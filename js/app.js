@@ -59,13 +59,14 @@
                         } else if (ageGroups === "senior"){
                             discount = basePrice * 0.4
                             }
-                        console.log('Discount:' + discount + '€')
+                        console.log('Discount:' + discount.toFixed(2) + '€')
 
-                    //3.31Calcolo prezzo finale
+                    //3.3Calcolo prezzo finale.
 
                     const finalPrice = basePrice - discount
-                    console.log('Final Price:' + finalPrice + '€')
+                    console.log('Final Price:' + finalPrice.toFixed(2) + '€')
 
+                //4 Usare i valori ottenuti dai calcoli per sostituire i valori di default nel biglietto.
         
             }   else {
                 alert('Inserire dati validi')
