@@ -1,3 +1,53 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    margin: auto;
+}
+
+/* LAYOUT */
+:root{
+    --main_color:#3C1362;
+}
+
 body{
-    background-color: #3C1362;
+    background-color: var(--main_color)
+}
+
+.ms_container{
+    max-width: 90%;
+}
+
+/* DATA ACQUISITION */
+
+.ms_container.card{
+    color: var(--main_color);
+    font-weight: 600;
+}
+
+h1{
+    font-size: 20px;
+    font-weight:700;
+}
+
+@media screen AND (min-width:768px) {
+    h1{
+        font-size: 30px;
+    }
+}
+
+@media screen AND (min-width:992px) {
+    h1{
+        font-size: 40px;
+    }
+}
+
+.data_acquisition button{
+    background-color: var(--main_color);
+    color: white;
+}
+
+.data_acquisition button:hover{
+    color: var(--main_color);
+    border-color: var(--main_color);
 }
