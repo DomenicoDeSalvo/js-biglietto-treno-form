@@ -18,9 +18,23 @@ body{
     max-width: 90%;
 }
 
+/* TITLES */
+
 h2{
     font-size: 20px;
     font-weight:700;
+}
+
+@media screen AND (min-width:768px) {
+    h2{
+        font-size: 30px;
+    }
+}
+
+@media screen AND (min-width:992px) {
+    h2{
+        font-size: 40px;
+    }
 }
 
 /* DATA ACQUISITION */
@@ -28,19 +42,6 @@ h2{
 .ms_container.card{
     color: var(--main_color);
     font-weight: 600;
-}
-
-
-@media screen AND (min-width:768px) {
-    h1{
-        font-size: 30px;
-    }
-}
-
-@media screen AND (min-width:992px) {
-    h1{
-        font-size: 40px;
-    }
 }
 
 .data_acquisition button{
@@ -51,4 +52,20 @@ h2{
 .data_acquisition button:hover{
     color: var(--main_color);
     border-color: var(--main_color);
+}
+
+/* TICKET OUTPUT */
+
+.ticket{
+    background-color: white;
+}
+
+.ticket .row{
+    border: 5px solid var(--main_color);
+    border-radius: 8px;
+}
+
+.ticket__value{
+    color: var(--main_color);
+    font-weight: 600;
 }
