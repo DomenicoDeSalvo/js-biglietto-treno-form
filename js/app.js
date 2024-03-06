@@ -89,7 +89,7 @@
 
                     //4.5   Acquisizione codice biglietto passeggero.
                     const passengerTicketCodeElement = document.getElementById('ticket__code');//Element | Null
-                            //4.3.1 Sostituzione valore con uno generato casualmente. Il numero è arrotondato per non avere valori decimali.
+                            //4.5.1 Sostituzione valore con uno generato casualmente. Il numero è arrotondato per non avere valori decimali.
                             passengerTicketCodeElement.innerHTML = Math.floor(Math.random() * (99999 - 10000 + 1) + 1); //Number
 
                     //4.6   Acquisizione tariffa relativa alla fascia d'età del passeggero
